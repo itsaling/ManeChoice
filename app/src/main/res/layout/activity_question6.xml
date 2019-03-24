@@ -23,7 +23,7 @@
     <TextView
             android:text="Thin/Normal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:layout_height="wrap_content" android:id="@+id/answer1"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/thin" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="57dp" android:layout_marginStart="57dp"/>
@@ -39,28 +39,28 @@
             android:text="Full/Thick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3" android:layout_marginTop="25dp"
+            android:id="@+id/answer3" android:layout_marginTop="25dp"
             app:layout_constraintTop_toBottomOf="@+id/full" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="162dp" android:layout_marginStart="162dp"/>
     <ImageView
             android:src="@mipmap/ic_launcher"
             android:layout_width="137dp"
             android:layout_height="128dp"
-            android:id="@+id/normal" android:layout_marginTop="44dp"
+            android:id="@+id/norm" android:layout_marginTop="44dp"
             app:layout_constraintTop_toBottomOf="@+id/question6" android:layout_marginLeft="91dp"
             android:layout_marginStart="91dp" app:layout_constraintStart_toEndOf="@+id/thin"/>
     <TextView
             android:text="Normal/Full"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" android:layout_marginTop="23dp"
-            app:layout_constraintTop_toBottomOf="@+id/normal" android:layout_marginLeft="149dp"
-            android:layout_marginStart="149dp" app:layout_constraintStart_toEndOf="@+id/textView"/>
+            android:id="@+id/answer2" android:layout_marginTop="23dp"
+            app:layout_constraintTop_toBottomOf="@+id/norm" android:layout_marginLeft="149dp"
+            android:layout_marginStart="149dp" app:layout_constraintStart_toEndOf="@+id/answer1"/>
     <Button
             android:text="prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/prev" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="120dp" app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+            android:layout_marginTop="120dp" app:layout_constraintTop_toBottomOf="@+id/answer3"/>
 
 </android.support.constraint.ConstraintLayout>

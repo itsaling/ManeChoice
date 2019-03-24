@@ -16,7 +16,7 @@ class activity_question6 : AppCompatActivity(), View.OnClickListener {
                 handleAnswers(question6)
                 moveToNextQuestion()
             }
-            R.id.normal -> {
+            R.id.norm -> {
                 handleAnswers(question6)
                 moveToNextQuestion()
             }

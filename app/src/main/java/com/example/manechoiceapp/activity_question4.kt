@@ -9,19 +9,19 @@ import kotlinx.android.synthetic.main.activity_question4.*
 import kotlinx.android.synthetic.main.activity_question5.*
 import kotlinx.android.synthetic.main.activity_question6.*
 
-class activity_question5 : AppCompatActivity(), View.OnClickListener {
+class activity_question4 : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.short -> {
+            R.id.low -> {
                 handleAnswers(question4)
                 moveToNextQuestion()
             }
-            R.id.medium -> {
+            R.id.norm -> {
                 handleAnswers(question4)
                 moveToNextQuestion()
             }
-            R.id.long -> {
+            R.id.high -> {
                 handleAnswers(question4)
                 moveToNextQuestion()
             }
@@ -52,7 +52,7 @@ class activity_question5 : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_question4)
 
         low.setOnClickListener { onClick(low) }
-        `@+id/norm`.setOnClickListener { onClick(`@+id/norm`) }
+        norm.setOnClickListener { onClick(norm) }
         high.setOnClickListener { onClick(high) }
 
 
