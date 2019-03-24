@@ -8,20 +8,20 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_question5.*
 import kotlinx.android.synthetic.main.activity_question6.*
 
-class activity_question6 : AppCompatActivity(), View.OnClickListener {
+class activity_question5 : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.thin -> {
-                handleAnswers(question6)
+            R.id.short -> {
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
-            R.id.normal -> {
-                handleAnswers(question6)
+            R.id.medium -> {
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
-            R.id.full -> {
-                handleAnswers(question6)
+            R.id.long -> {
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
 
