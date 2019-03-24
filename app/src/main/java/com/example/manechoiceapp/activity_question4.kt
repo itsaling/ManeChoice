@@ -17,7 +17,7 @@ class activity_question4 : AppCompatActivity(), View.OnClickListener {
                 handleAnswers(question4)
                 moveToNextQuestion()
             }
-            R.id.norm -> {
+            R.id.normal -> {
                 handleAnswers(question4)
                 moveToNextQuestion()
             }
@@ -52,7 +52,7 @@ class activity_question4 : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_question4)
 
         low.setOnClickListener { onClick(low) }
-        norm.setOnClickListener { onClick(norm) }
+        `@+id/normal`.setOnClickListener { onClick(`@+id/normal`) }
         high.setOnClickListener { onClick(high) }
 
 

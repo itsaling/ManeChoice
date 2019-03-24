@@ -5,24 +5,22 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_question4.*
 import kotlinx.android.synthetic.main.activity_question5.*
-import kotlinx.android.synthetic.main.activity_question6.*
 
 class activity_question5 : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.short -> {
-                handleAnswers(question4)
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
             R.id.medium -> {
-                handleAnswers(question4)
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
             R.id.long -> {
-                handleAnswers(question4)
+                handleAnswers(question5)
                 moveToNextQuestion()
             }
 
@@ -51,9 +49,9 @@ class activity_question5 : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question4)
 
-        low.setOnClickListener { onClick(low) }
-        `@+id/norm`.setOnClickListener { onClick(`@+id/norm`) }
-        high.setOnClickListener { onClick(high) }
+        medium.setOnClickListener { onClick(medium) }
+        short.setOnClickListener { onClick(short) }
+        long.setOnClickListener { onClick(long) }
 
 
         prev.setOnClickListener {

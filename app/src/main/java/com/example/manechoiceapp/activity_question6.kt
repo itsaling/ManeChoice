@@ -5,7 +5,6 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_question5.*
 import kotlinx.android.synthetic.main.activity_question6.*
 
 class activity_question6 : AppCompatActivity(), View.OnClickListener {
@@ -16,7 +15,7 @@ class activity_question6 : AppCompatActivity(), View.OnClickListener {
                 handleAnswers(question6)
                 moveToNextQuestion()
             }
-            R.id.norm -> {
+            R.id.normal -> {
                 handleAnswers(question6)
                 moveToNextQuestion()
             }
@@ -48,11 +47,11 @@ class activity_question6 : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question5)
+        setContentView(R.layout.activity_question6)
 
-        short.setOnClickListener { onClick(short) }
-        medium.setOnClickListener { onClick(medium) }
-        long.setOnClickListener { onClick(long) }
+        thin.setOnClickListener { onClick(thin) }
+        normal.setOnClickListener { onClick(normal) }
+        full.setOnClickListener { onClick(full) }
 
 
         prev.setOnClickListener {
