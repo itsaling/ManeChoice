@@ -8,26 +8,21 @@ import android.view.View
 import com.example.manechoiceapp.interfaces.IQuestionController
 import com.example.manechoiceapp.models.Answers
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_question1.*
+import kotlinx.android.synthetic.main.activity_question4.*
 
-class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController{
-
+class question4 : AppCompatActivity(), View.OnClickListener, IQuestionController {
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.type1 -> {
-                handleAnswers(question1)
+            R.id.low -> {
+                handleAnswers(question4)
                 moveToNextQuestion()
             }
-            R.id.type2 -> {
-                handleAnswers(question1)
+            R.id.normal -> {
+                handleAnswers(question4)
                 moveToNextQuestion()
             }
-            R.id.type3 -> {
-                handleAnswers(question1)
-                moveToNextQuestion()
-            }
-            R.id.type4 -> {
-                handleAnswers(question1)
+            R.id.high -> {
+                handleAnswers(question4)
                 moveToNextQuestion()
             }
         }
@@ -47,23 +42,19 @@ class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController
     }
 
     override fun moveToNextQuestion(){
-        val question2Activity = Intent(this, question21::class.java)
-        startActivity(question2Activity)
+        val question5Activity = Intent(this, question5::class.java)
+        startActivity(question5Activity)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question1)
+        setContentView(R.layout.activity_question4)
+        low.setOnClickListener { onClick(low) }
+        normal.setOnClickListener { onClick(normal) }
+        high.setOnClickListener { onClick(high) }
 
-        type1.setOnClickListener { onClick(type1) }
-        type2.setOnClickListener { onClick(type2) }
-        type3.setOnClickListener { onClick(type3) }
-        type4.setOnClickListener { onClick(type4) }
-
-        prev.setOnClickListener {
-            finish()
-        }
-
-
+//        prev.setOnClickListener {
+//            finish()
+//        }
     }
 }

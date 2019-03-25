@@ -8,26 +8,18 @@ import android.view.View
 import com.example.manechoiceapp.interfaces.IQuestionController
 import com.example.manechoiceapp.models.Answers
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_question1.*
+import kotlinx.android.synthetic.main.activity_question31.*
+import kotlinx.android.synthetic.main.activity_question32.*
 
-class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController{
-
+class question31 : AppCompatActivity(), View.OnClickListener, IQuestionController {
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.type1 -> {
-                handleAnswers(question1)
+            R.id.loose -> {
+                handleAnswers(question31)
                 moveToNextQuestion()
             }
-            R.id.type2 -> {
-                handleAnswers(question1)
-                moveToNextQuestion()
-            }
-            R.id.type3 -> {
-                handleAnswers(question1)
-                moveToNextQuestion()
-            }
-            R.id.type4 -> {
-                handleAnswers(question1)
+            R.id.wavy1 -> {
+                handleAnswers(question31)
                 moveToNextQuestion()
             }
         }
@@ -47,23 +39,18 @@ class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController
     }
 
     override fun moveToNextQuestion(){
-        val question2Activity = Intent(this, question21::class.java)
-        startActivity(question2Activity)
+        val question4Activity = Intent(this, question4::class.java)
+        startActivity(question4Activity)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question1)
-
-        type1.setOnClickListener { onClick(type1) }
-        type2.setOnClickListener { onClick(type2) }
-        type3.setOnClickListener { onClick(type3) }
-        type4.setOnClickListener { onClick(type4) }
-
-        prev.setOnClickListener {
-            finish()
-        }
-
-
+        setContentView(R.layout.activity_question31)
+        loose.setOnClickListener { onClick(loose) }
+        wavy1.setOnClickListener { onClick(wavy1) }
+//
+//        prev.setOnClickListener {
+//            finish()
+//        }
     }
 }

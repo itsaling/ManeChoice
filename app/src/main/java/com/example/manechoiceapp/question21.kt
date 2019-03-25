@@ -8,26 +8,25 @@ import android.view.View
 import com.example.manechoiceapp.interfaces.IQuestionController
 import com.example.manechoiceapp.models.Answers
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_question1.*
+import kotlinx.android.synthetic.main.activity_question21.*
 
-class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController{
-
+class question21 : AppCompatActivity(), View.OnClickListener, IQuestionController {
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.type1 -> {
-                handleAnswers(question1)
+            R.id.typeA -> {
+                handleAnswers(question21)
                 moveToNextQuestion()
             }
-            R.id.type2 -> {
-                handleAnswers(question1)
+            R.id.typeB -> {
+                handleAnswers(question21)
                 moveToNextQuestion()
             }
-            R.id.type3 -> {
-                handleAnswers(question1)
+            R.id.typeC -> {
+                handleAnswers(question21)
                 moveToNextQuestion()
             }
-            R.id.type4 -> {
-                handleAnswers(question1)
+            R.id.typeD -> {
+                handleAnswers(question21)
                 moveToNextQuestion()
             }
         }
@@ -47,23 +46,20 @@ class question1 : AppCompatActivity(), View.OnClickListener, IQuestionController
     }
 
     override fun moveToNextQuestion(){
-        val question2Activity = Intent(this, question21::class.java)
+        val question2Activity = Intent(this, question31::class.java)
         startActivity(question2Activity)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_question1)
-
-        type1.setOnClickListener { onClick(type1) }
-        type2.setOnClickListener { onClick(type2) }
-        type3.setOnClickListener { onClick(type3) }
-        type4.setOnClickListener { onClick(type4) }
+        setContentView(R.layout.activity_question21)
+        typeA.setOnClickListener { onClick(typeA) }
+        typeB.setOnClickListener { onClick(typeB) }
+        typeC.setOnClickListener { onClick(typeC) }
+        typeD.setOnClickListener { onClick(typeD) }
 
         prev.setOnClickListener {
             finish()
         }
-
-
     }
 }
