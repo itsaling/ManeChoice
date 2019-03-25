@@ -5,9 +5,11 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.manechoiceapp.Interfaces.IQuestionController
+import com.example.manechoiceapp.Model.Answers
 import kotlinx.android.synthetic.main.activity_question6.*
 
-class activity_question6 : AppCompatActivity(), View.OnClickListener {
+class activity_question6 : AppCompatActivity(), View.OnClickListener, IQuestionController {
 
     override fun onClick(v: View?) {
         when (v?.id) {
