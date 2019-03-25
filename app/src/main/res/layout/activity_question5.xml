@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".question5">
+        tools:context=".question5"
+        android:background="@android:color/white">
     <TextView
             android:text="Length Check- How long is your hair?"
             android:layout_width="wrap_content"
@@ -15,7 +16,7 @@
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:textSize="24sp"/>
     <ImageView
             android:layout_width="170dp"
-            android:layout_height="160dp" app:srcCompat="@drawable/strightmen"
+            android:layout_height="160dp" app:srcCompat="@drawable/shorthair"
             android:id="@+id/short1"
             app:layout_constraintEnd_toStartOf="@+id/medium" android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
@@ -33,7 +34,7 @@
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/short1"/>
     <ImageView
             android:layout_width="169dp"
-            android:layout_height="158dp" app:srcCompat="@drawable/coily"
+            android:layout_height="158dp" app:srcCompat="@drawable/longhair"
             android:id="@+id/long1"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="120dp" android:layout_marginStart="120dp"
@@ -50,7 +51,7 @@
             app:layout_constraintTop_toBottomOf="@+id/long1"/>
     <ImageView
             android:layout_width="169dp"
-            android:layout_height="158dp" app:srcCompat="@drawable/curlhair"
+            android:layout_height="158dp" app:srcCompat="@drawable/mediumhair"
             android:id="@+id/medium" android:layout_marginTop="36dp"
             app:layout_constraintTop_toBottomOf="@+id/question5"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"

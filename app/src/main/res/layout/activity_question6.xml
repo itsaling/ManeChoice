@@ -5,7 +5,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".question6">
+        tools:context=".question6"
+        android:background="@android:color/white">
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/question6" app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +20,7 @@
             android:layout_height="158dp"
             android:id="@+id/thin" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
             android:layout_marginStart="32dp" android:layout_marginTop="44dp"
-            app:layout_constraintTop_toBottomOf="@+id/question6"/>
+            app:layout_constraintTop_toBottomOf="@+id/question6" app:srcCompat="@drawable/thinhair"/>
     <TextView
             android:text="Thin/Normal"
             android:layout_width="wrap_content"
@@ -36,7 +37,8 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="120dp"
             android:layout_marginStart="120dp" android:layout_marginTop="13dp"
             app:layout_constraintTop_toBottomOf="@+id/answer1" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="122dp" android:layout_marginRight="122dp"/>
+            android:layout_marginEnd="122dp" android:layout_marginRight="122dp"
+            app:srcCompat="@drawable/thick"/>
     <TextView
             android:text="Full/Thick"
             android:layout_width="wrap_content"
@@ -52,7 +54,8 @@
             android:layout_height="158dp"
             android:id="@+id/normal" android:layout_marginTop="44dp"
             app:layout_constraintTop_toBottomOf="@+id/question6" android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp" app:layout_constraintStart_toEndOf="@+id/thin"/>
+            android:layout_marginStart="20dp" app:layout_constraintStart_toEndOf="@+id/thin"
+            app:srcCompat="@drawable/normalnormal"/>
     <TextView
             android:text="Normal/Full"
             android:layout_width="wrap_content"
