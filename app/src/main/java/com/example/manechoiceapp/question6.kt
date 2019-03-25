@@ -8,7 +8,6 @@ import android.view.View
 import com.example.manechoiceapp.interfaces.IQuestionController
 import com.example.manechoiceapp.models.Answers
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_question5.*
 import kotlinx.android.synthetic.main.activity_question6.*
 
 class question6 : AppCompatActivity(), View.OnClickListener, IQuestionController {
@@ -43,7 +42,7 @@ class question6 : AppCompatActivity(), View.OnClickListener, IQuestionController
     }
 
     override fun moveToNextQuestion(){
-        val resultActivity = Intent(this, result::class.java)
+        val resultActivity = Intent(this, resultPage::class.java)
         startActivity(resultActivity)
     }
 

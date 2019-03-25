@@ -5,16 +5,17 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".result"
+        tools:context=".resultPage"
         android:background="@android:color/white">
 
     <TextView
             android:text="Result"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp" android:id="@+id/textView"
-            android:textSize="24sp" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="186dp"
-            android:layout_marginStart="186dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="158dp" android:layout_marginRight="158dp" android:layout_marginBottom="683dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="312dp" android:layout_marginBottom="370dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>
