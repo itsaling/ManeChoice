@@ -4,6 +4,15 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.io.InputStream
+import jdk.nashorn.internal.runtime.ScriptingFunctions.readLine
+import android.R
+import android.database.SQLException
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table
+
+
 
 
 class DatabaseHelper(context: Context) :
@@ -19,6 +28,18 @@ class DatabaseHelper(context: Context) :
                 "HAIR_ABSORBENT TEXT, " +
                 "HAIR_FULLNESS TEXT, " +
                 "Constraint singleRow CHECK (ID = 1))")
+        db.execSQL("CREATE TABLE $TABLE_SHAMPOO" +
+                "(ID INTEGER PRIMARY KEY " +
+                "PRODUCTNAME TEXT," +
+                "BRAND TEXT, " +
+                "PRICE DOUBLE," +
+                "PHOTO TEXT")
+        db.execSQL("CREATE TABLE $TABLE_CONDITIONER" +
+                "(ID INTEGER PRIMARY KEY " +
+                "CONDITIONER TEXT")
+        db.execSQL("CREATE TABLE $TABLE_TREATMENT" +
+                "(ID INTEGER PRIMARY KEY " +
+                "TREATMENT TEXT")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -86,6 +107,13 @@ class DatabaseHelper(context: Context) :
         val db = this.writableDatabase
         db.execSQL("DELETE FROM $TABLE_NAME")
     }
+    fun readJsonFromFile(){
+        val db = this.writableDatabase
+        val values = ContentValues()
+        db.execSQL("INSERT INTO $TABLE_SHAMPOO VALUES()")
+
+
+    }
 
     val allData : Cursor
         get() {
@@ -97,6 +125,10 @@ class DatabaseHelper(context: Context) :
     companion object {
         val DATABASE_NAME = "hairProduct2.db"
         val TABLE_NAME = "hair_table"
+        val TABLE_SHAMPOO = "shampoo_table"
+        val TABLE_CONDITIONER = "conditioner_table"
+        val TABLE_TREATMENT = "treatment_table"
+
         val COL_1 = "id"
         val COL_2 = "hair_type"
         val COL_3 = "hair_pattern"

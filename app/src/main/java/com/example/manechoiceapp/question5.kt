@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.View
 import com.example.manechoiceapp.interfaces.IQuestionController
 import com.example.manechoiceapp.models.Answers
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_question5.*
 
 class question5 : AppCompatActivity() {

@@ -10,32 +10,42 @@
 
     <TextView
             android:text="Result"
-            android:layout_width="244dp"
-            android:layout_height="283dp"
+            android:layout_width="350dp"
+            android:layout_height="386dp"
             android:id="@+id/resultView"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp"/>
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="37dp" android:layout_marginStart="37dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
     <Button
             android:text="Reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/resetBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="161dp" android:layout_marginStart="161dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="162dp"
-            android:layout_marginRight="162dp" android:layout_marginBottom="160dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:layout_marginTop="80dp" app:layout_constraintTop_toBottomOf="@+id/showText"/>
-    <Button
-            android:text="show"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_marginTop="67dp"
+            app:layout_constraintTop_toBottomOf="@+id/resultView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="72dp" android:layout_marginRight="72dp" android:layout_marginBottom="163dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="Review Your Hair Type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/showText" android:layout_marginTop="76dp"
-            app:layout_constraintTop_toBottomOf="@+id/resultView" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="161dp" android:layout_marginStart="161dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="162dp"
-            android:layout_marginRight="162dp"/>
+            android:textSize="20dp"
+            android:id="@+id/textView12" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="37dp"
+            android:layout_marginStart="37dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="173dp"
+            android:layout_marginRight="173dp"/>
+    <Button
+            android:text="View Products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/productRec"
+            style="@style/Widget.AppCompat.Button.Colored" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="84dp" android:layout_marginStart="84dp"
+            app:layout_constraintEnd_toStartOf="@+id/resetBtn" android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp" android:layout_marginTop="67dp"
+            app:layout_constraintTop_toBottomOf="@+id/resultView" android:layout_marginBottom="163dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>

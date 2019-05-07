@@ -1,0 +1,15 @@
+[{
+  "id": "1",
+  "productName": "avocado",
+  "brand": "garnier",
+  "photo": "",
+  "price": "$7.00"
+},
+  {
+    "id": "2",
+    "productName": "peach",
+    "brand": "loreal",
+    "photo": "",
+    "price": "$7.00"
+  }
+]

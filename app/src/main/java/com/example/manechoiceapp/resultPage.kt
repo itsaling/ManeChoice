@@ -45,28 +45,28 @@ class resultPage : AppCompatActivity() {
         }
     }
     fun handleView(){
-        showText.setOnClickListener (
-            View.OnClickListener {
+//        showText.setOnClickListener (
+//            View.OnClickListener {
                 val res = dbHelper.allData
-                if (res.count == 0) {
-                    showDialog("Error", "No Data Found")
-                    return@OnClickListener
-                }
+//                if (res.count == 0) {
+//                    showDialog("Error", "No Data Found")
+//                    return@OnClickListener
+//                }
 
                 val buffer = StringBuffer()
                 while (res.moveToNext()) {
-                    buffer.append("ID :" + res.getString(0) + "\n")
-                    buffer.append("HAIR TYPE:" + res.getString(1) + "\n")
-                    buffer.append("HAIR PATTERN:" + res.getString(2) + "\n")
-                    buffer.append("HAIR TEXTURE:" + res.getString(3) + "\n")
-                    buffer.append("HAIR LENGTH:" + res.getString(4) + "\n")
-                    buffer.append("HAIR ABSORBENT:" + res.getString(5) + "\n")
-                    buffer.append("HAIR FULLNESS:" + res.getString(6) + "\n")
+//                    buffer.append("ID :" + res.getString(0) + "\n")
+                    buffer.append("HAIR TYPE: \n" + res.getString(1) + "\n\n")
+                    buffer.append("HAIR PATTERN:\n" + res.getString(2) + "\n\n")
+                    buffer.append("HAIR TEXTURE:\n" + res.getString(3) + "\n\n")
+                    buffer.append("HAIR LENGTH:\n" + res.getString(4) + "\n\n")
+                    buffer.append("HAIR ABSORBENT:\n" + res.getString(5) + "\n\n")
+                    buffer.append("HAIR FULLNESS:\n" + res.getString(6) + "\n\n")
                 }
                 resultView.setText(buffer.toString())
 
 //                showDialog("Data Listing", buffer.toString())
-            }
-        )
+//            }
+//        )
     }
 }
