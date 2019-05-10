@@ -10,10 +10,11 @@
 
     <TextView
             android:text="Result"
-            android:layout_width="350dp"
-            android:layout_height="386dp"
+            android:layout_width="352dp"
+            android:layout_height="497dp"
             android:id="@+id/resultView"
-            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textSize="18sp"
             android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/textView12" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="37dp" android:layout_marginStart="37dp" app:layout_constraintEnd_toEndOf="parent"
@@ -30,13 +31,15 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:text="Review Your Hair Type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:id="@+id/textView12" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="37dp"
-            android:layout_marginStart="37dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="173dp"
-            android:layout_marginRight="173dp"/>
+            android:layout_width="416dp"
+            android:layout_height="64dp"
+            android:textSize="30sp"
+            android:id="@+id/textView12" app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="15dp"
+            android:paddingLeft="60dp" android:background="#A7063D" android:textColor="#FDFBFB"
+            android:fontFamily="sans-serif-thin"/>
     <Button
             android:text="View Products"
             android:layout_width="wrap_content"
