@@ -7,7 +7,7 @@ import com.androidnetworking.interfaces.ParsedRequestListener
 
 class NetworkHelper{
     fun fetchProducts(callback: (List<products>) -> Unit){
-        AndroidNetworking.get("https://my-json-server.typicode.com/lle7/mainchoice/shampoo")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/shampoo")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()

@@ -6,9 +6,9 @@
         android:layout_weight="1"
         app:cardElevation="5dp"
         android:elevation="0dp"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
     <LinearLayout
             android:orientation="vertical"
