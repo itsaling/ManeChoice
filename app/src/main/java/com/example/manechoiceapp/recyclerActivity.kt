@@ -63,8 +63,6 @@ class recyclerActivity : AppCompatActivity(), IController {
         var hairtAbs: String
         var hairtFull: String
 
-
-
         while (res.moveToNext()) {
             hairtType = res.getString(1)
             hairtTexture = res.getString(3)
@@ -143,7 +141,7 @@ class recyclerActivity : AppCompatActivity(), IController {
                     }
             } else {
                 NetworkHelper()
-                    .fetchAllProducts {
+                    .fetchProducts {
                         list.clear()
                         list.addAll(it)
                         recyclerView.adapter?.notifyDataSetChanged()
@@ -153,8 +151,6 @@ class recyclerActivity : AppCompatActivity(), IController {
         recyclerView.adapter = ProductAdapter(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
-
-
     fun handleReset(){
         resetBtn.setOnClickListener{
             try {
@@ -167,8 +163,3 @@ class recyclerActivity : AppCompatActivity(), IController {
         }
     }
 }
-
-//    val hairType:Int
-//    val hairTexture:Int
-//    val hairAbs:Int
-//    val hairFull:Int

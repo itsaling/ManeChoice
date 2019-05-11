@@ -52,8 +52,6 @@ class resultPage : AppCompatActivity(){
     }
     fun handleView(){
         val res = dbHelper.allData
-
-
         val buffer = StringBuffer()
         while (res.moveToNext()) {
 //                    buffer.append("ID :" + res.getString(0) + "\n")
