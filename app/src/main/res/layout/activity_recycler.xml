@@ -8,66 +8,32 @@
         android:layout_height="match_parent"
         android:background="@android:color/white"
         tools:context=".recyclerActivity">
-
-    <!--<TextView-->
-            <!--android:text="Products"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textSize="24dp"-->
-            <!--android:textColor="@android:color/white"-->
-            <!--android:textAlignment="center"-->
-            <!--android:background="#FFA7063D"-->
-            <!--android:padding="16dp"-->
-            <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--app:layout_constraintRight_toRightOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent"-->
-            <!--android:id="@+id/textView12"-->
-            <!--app:layout_constraintHorizontal_bias="0.0"/>-->
-    <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/recyclerView"-->
-            <!--android:layout_width="408dp"-->
-            <!--android:layout_height="508dp"-->
-            <!--tools:listitem="@layout/productview_item" tools:layout_editor_absoluteX="0dp"-->
-            <!--android:layout_marginBottom="60dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout"-->
-            <!--android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/textView12"-->
-            <!--app:layout_constraintVertical_bias="1.0"/>-->
-    <!--<LinearLayout-->
-            <!--android:orientation="horizontal"-->
-            <!--android:layout_width="395dp"-->
-            <!--android:layout_height="56dp"-->
-            <!--android:id="@+id/linearLayout" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"-->
-            <!--android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginRight="8dp" android:layout_marginBottom="8dp"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent">-->
-        <!--<Button-->
-                <!--android:text="Similar Product"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content" android:id="@+id/similarProductBtn" android:layout_weight="1"-->
-                <!--style="@style/Widget.AppCompat.Button.Colored"/>-->
-        <!--<Button-->
-                <!--android:text="View all"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content" android:id="@+id/viewAllProductBtn" android:layout_weight="1"-->
-                <!--style="@style/Widget.AppCompat.Button.Colored"/>-->
-        <!--<Button-->
-                <!--android:text="reset"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content" android:id="@+id/resetBtn" android:layout_weight="1"/>-->
-    <!--</LinearLayout>-->
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <TextView
-        android:text="Products"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:textColor="@android:color/white"
-        android:textAlignment="center"
-        android:background="#FFA7063D"
-        android:padding="16dp"
-        android:id="@+id/textView"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:background="#FFA7063D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="Products"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/white"
+                    android:padding="16dp"
+                    android:id="@+id/productTitle"/>
+            <Button
+                    android:text="Your Product"
+                    android:textColor="#fff"
+                    android:layout_width="50dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yourProduct"
+                    android:layout_weight="1"/>
+        </LinearLayout>
         <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
@@ -80,18 +46,18 @@
                 android:layout_height="wrap_content">
             <Button
                     android:text="Similar Product"
-                    android:layout_width="wrap_content"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content" android:id="@+id/similarProductBtn" android:layout_weight="1"
                     style="@style/Widget.AppCompat.Button.Colored"/>
             <Button
                     android:text="View all"
-                    android:layout_width="wrap_content"
+                    android:layout_width="51dp"
                     android:layout_height="wrap_content" android:id="@+id/viewAllProductBtn" android:layout_weight="1"
                     style="@style/Widget.AppCompat.Button.Colored"/>
             <Button
                     android:text="reset"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/resetBtn" android:layout_weight="1"/>
+                    android:layout_width="55dp"
+                    android:layout_height="50dp" android:id="@+id/resetBtn" android:layout_weight="1"/>
         </LinearLayout>
 
     </LinearLayout>

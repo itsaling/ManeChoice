@@ -7,7 +7,7 @@ import com.androidnetworking.interfaces.ParsedRequestListener
 
 class NetworkHelper{
     fun fetchProducts(callback: (List<products>) -> Unit){
-        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/shampoo")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/conditioner")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()
@@ -20,5 +20,21 @@ class NetworkHelper{
                     //handle error
                 }
             })
+    }
+    fun fetchAllProducts(callback: (List<products>) -> Unit){
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/viewall")
+            .setTag(this)
+            .setPriority(Priority.LOW)
+            .build()
+            .getAsObjectList(products::class.java, object : ParsedRequestListener<List<products>> {
+                override fun onResponse(product: List<products>) {
+                    callback(product)
+                }
+
+                override fun onError(anError: ANError?) {
+                    //handle error
+                }
+            })
+
     }
 }

@@ -16,6 +16,25 @@ class recyclerActivity : AppCompatActivity(),IController {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler)
+        connectNetwork()
+        yourProduct.setOnClickListener {
+            productTitle.text = "Your Products"
+            connectNetwork()
+        }
+        viewAllProductBtn.setOnClickListener {
+            productTitle.text = "All Products"
+            NetworkHelper()
+                .fetchAllProducts {
+                    list.clear()
+                    list.addAll(it)
+                    recyclerView.adapter?.notifyDataSetChanged()
+                }
+            recyclerView.adapter = ProductAdapter(this)
+            recyclerView.layoutManager = LinearLayoutManager(this)
+        }
+    }
+
+    fun connectNetwork(){
         NetworkHelper()
             .fetchProducts {
                 list.clear()
