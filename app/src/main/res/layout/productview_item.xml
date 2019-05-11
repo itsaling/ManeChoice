@@ -14,35 +14,73 @@
             android:orientation="vertical"
             android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:text="ID: "
-                android:textSize="20dp"
-                android:layout_weight="1"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/productIdTv"/>
-        <TextView
-                android:text="Product Name: "
-                android:textSize="20dp"
-                android:layout_weight="1"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="ID:"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView24" />
+            <TextView
+                    android:text="ID"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/productIdTv" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/productNameTv"/>
-        <TextView
-                android:text="Brand: "
-                android:textSize="20dp"
-                android:layout_weight="1"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Name:"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            <TextView
+                    android:text="Product Name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/productNameTv" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/productBrandTv"/>
-        <TextView
-                android:text="Price:"
-                android:layout_weight="1"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Brand:"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            <TextView
+                    android:text="Brand"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/productBrandTv" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:id="@+id/productPriceTv"/>
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Price:"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView26" />
+            <TextView
+                    android:text="Price"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/productPriceTv" android:layout_weight="1"/>
+        </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
+
 
