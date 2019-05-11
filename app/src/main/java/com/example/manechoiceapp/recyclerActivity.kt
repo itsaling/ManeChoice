@@ -11,6 +11,10 @@ class recyclerActivity : AppCompatActivity(), IController {
     val list : MutableList<products> = mutableListOf()
     override val product: List<products> = list
     internal var dbHelper = DatabaseHelper(this)
+    lateinit var hairtType: String
+    lateinit var hairtTexture: String
+    lateinit var hairtAbs: String
+    lateinit var hairtFull: String
 
     companion object {
         val TAG = MainActivity::class.java.simpleName
@@ -25,7 +29,7 @@ class recyclerActivity : AppCompatActivity(), IController {
         yourProduct.setOnClickListener {
             productTitle.text = "Your Products"
 //            connectNetwork()
-//            handleProductRecommend()
+            handleProductRecommend()
         }
         viewAllProductBtn.setOnClickListener {
             productTitle.text = "All Products"
@@ -58,15 +62,12 @@ class recyclerActivity : AppCompatActivity(), IController {
 
     fun handleProductRecommend(){
         val res = dbHelper.allData
-        var hairtType: String
-        var hairtTexture: String
-        var hairtAbs: String
-        var hairtFull: String
+
 
         while (res.moveToNext()) {
             hairtType = res.getString(1)
             hairtTexture = res.getString(3)
-            hairtAbs = res.getString(5)
+            hairtAbs = res.getString(4)
             hairtFull = res.getString(6)
 
             if (hairtType == "Straight" && hairtTexture == "Loose" && hairtAbs == "Low" && hairtFull == "Thin") {
@@ -76,7 +77,7 @@ class recyclerActivity : AppCompatActivity(), IController {
                         list.addAll(it)
                         recyclerView.adapter?.notifyDataSetChanged()
                     }
-            } else if (hairtType == "Curly" && hairtTexture == "Somewhat-Wavy" && hairtAbs == "Medium" && hairtFull == "Normal") {
+            } else if (hairtType == "Wavy-Curly" && hairtTexture == "Somewhat-Wavy" && hairtAbs == "Normal" && hairtFull == "Normal") {
                 NetworkHelper()
                     .fetchCombo2 {
                         list.clear()
@@ -111,7 +112,7 @@ class recyclerActivity : AppCompatActivity(), IController {
                         list.addAll(it)
                         recyclerView.adapter?.notifyDataSetChanged()
                     }
-            } else if (hairtType == "Wavy-Curly" && hairtTexture == "Somewhat-Wavy" && hairtAbs == "Medium" && hairtFull == "Normal") {
+            } else if (hairtType == "Wavy-Curly" && hairtTexture == "Somewhat-Wavy" && hairtAbs == "Normal" && hairtFull == "Normal") {
                 NetworkHelper()
                     .fetchCombo7 {
                         list.clear()
