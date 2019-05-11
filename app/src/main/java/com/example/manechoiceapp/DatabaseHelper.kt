@@ -5,13 +5,10 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.io.InputStream
-import jdk.nashorn.internal.runtime.ScriptingFunctions.readLine
 import android.R
 import android.database.SQLException
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table
-
 
 
 
