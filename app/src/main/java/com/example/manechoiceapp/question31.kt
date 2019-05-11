@@ -35,7 +35,7 @@ class question31 : AppCompatActivity(){
         }
         wavy1.setOnClickListener {
             try {
-                dbHelper.updateData3("1", "Somewhat Wavy")
+                dbHelper.updateData3("1", "Somewhat-Wavy")
                 moveToNextQuestion()
             }catch (e: Exception){
                 e.printStackTrace()

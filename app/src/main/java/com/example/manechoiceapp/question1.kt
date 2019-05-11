@@ -27,7 +27,7 @@ class question1 : AppCompatActivity() {
     fun handleUpdate(){
         type1.setOnClickListener {
             try {
-                dbHelper.updateData1("1", "Type 1")
+                dbHelper.updateData1("1", "Straight")
                 moveToNextQuestion()
             }catch (e: Exception){
                 e.printStackTrace()
@@ -36,7 +36,7 @@ class question1 : AppCompatActivity() {
         }
         type2.setOnClickListener {
             try {
-                dbHelper.updateData1("1","Type 2")
+                dbHelper.updateData1("1","Wavy-Curly")
                 moveToNextQuestion()
             }catch (e: Exception){
                 e.printStackTrace()
@@ -45,7 +45,7 @@ class question1 : AppCompatActivity() {
         }
         type3.setOnClickListener {
             try {
-                dbHelper.updateData1("1","Type 3")
+                dbHelper.updateData1("1","Curly-Kinky")
                 moveToNextQuestion()
             }catch (e: Exception){
                 e.printStackTrace()
@@ -54,7 +54,7 @@ class question1 : AppCompatActivity() {
         }
         type4.setOnClickListener {
             try {
-                dbHelper.updateData1("1","Type 4")
+                dbHelper.updateData1("1","Kinky-Coily")
                 moveToNextQuestion()
             }catch (e: Exception){
                 e.printStackTrace()

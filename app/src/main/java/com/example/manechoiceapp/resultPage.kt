@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.manechoiceapp.interfaces.IController
+import kotlinx.android.synthetic.main.activity_question1.*
 import kotlinx.android.synthetic.main.activity_resultpage.*
 
-class resultPage : AppCompatActivity() {
+class resultPage : AppCompatActivity(){
     internal var dbHelper = DatabaseHelper(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,28 +51,6 @@ class resultPage : AppCompatActivity() {
         }
     }
     fun handleView(){
-//        resultView.setOnClickListener (
-//            View.OnClickListener {
-//                val res = dbHelper.allData
-//                if (res.count == 0) {
-//                    showDialog("Error", "No Data Found")
-//                    return@OnClickListener
-//                }
-//
-//                val buffer = StringBuffer()
-//                while (res.moveToNext()) {
-////                    buffer.append("ID :" + res.getString(0) + "\n")
-//                    buffer.append("HAIR TYPE: \n" + res.getString(1) + "\n\n")
-//                    buffer.append("HAIR PATTERN:\n" + res.getString(2) + "\n\n")
-//                    buffer.append("HAIR TEXTURE:\n" + res.getString(3) + "\n\n")
-//                    buffer.append("HAIR LENGTH:\n" + res.getString(4) + "\n\n")
-//                    buffer.append("HAIR ABSORBENT:\n" + res.getString(5) + "\n\n")
-//                    buffer.append("HAIR FULLNESS:\n" + res.getString(6) + "\n\n")
-//                }
-//                resultView.setText(buffer.toString())
-//
-//            }
-//        )
         val res = dbHelper.allData
 
 
@@ -80,12 +60,14 @@ class resultPage : AppCompatActivity() {
             buffer.append("HAIR TYPE: \n" + res.getString(1) + "\n\n")
             buffer.append("HAIR PATTERN:\n" + res.getString(2) + "\n\n")
             buffer.append("HAIR TEXTURE:\n" + res.getString(3) + "\n\n")
-            buffer.append("HAIR LENGTH:\n" + res.getString(4) + "\n\n")
-            buffer.append("HAIR ABSORBENT:\n" + res.getString(5) + "\n\n")
+            buffer.append("HAIR LENGTH:\n" + res.getString(5) + "\n\n")
+            buffer.append("HAIR ABSORBENT:\n" + res.getString(4) + "\n\n")
             buffer.append("HAIR FULLNESS:\n" + res.getString(6) + "\n\n")
+//            buffer.append(type1.toString())
         }
         resultView.setText(buffer.toString())
 
 
     }
+
 }

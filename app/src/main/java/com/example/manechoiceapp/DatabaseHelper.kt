@@ -94,6 +94,7 @@ class DatabaseHelper(context: Context) :
             return res
         }
 
+
     companion object {
         val DATABASE_NAME = "hairProduct2.db"
         val TABLE_NAME = "hair_table"
