@@ -19,25 +19,30 @@
                 android:layout_height="wrap_content">
             <TextView
                     android:text="Products"
-                    android:layout_width="270dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:textSize="24dp"
                     android:textColor="@android:color/white"
                     android:padding="16dp"
                     android:id="@+id/productTitle"/>
+            <TextView
+                    android:text="1"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content" android:id="@+id/productCount" android:layout_weight="1"
+                    android:textColor="#EBE3E3" android:textSize="18sp"/>
             <Button
-                    android:text="Your Product"
+                    android:text="Your Products"
                     android:textColor="#fff"
-                    android:layout_width="50dp"
+                    android:layout_width="173dp"
                     android:background="@color/colorPrimaryDark"
-                    android:layout_height="wrap_content"
+                    android:layout_height="84dp"
                     android:id="@+id/yourProduct"
                     android:layout_weight="1"/>
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="492dp"
+                android:layout_height="465dp"
                 tools:listitem="@layout/productview_item"
         />
         <LinearLayout

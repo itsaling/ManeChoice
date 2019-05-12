@@ -15,33 +15,53 @@ class recyclerActivity : AppCompatActivity(), IController {
     lateinit var hairtTexture: String
     lateinit var hairtAbs: String
     lateinit var hairtFull: String
+    lateinit var hT: String
+    lateinit var hA: String
+    lateinit var hF: String
+
+
 
     companion object {
         val TAG = MainActivity::class.java.simpleName
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler)
-//        connectNetwork()
         handleReset()
-        handleProductRecommend()
+//        handleProductRecommend()
+        recommend()
         yourProduct.setOnClickListener {
             productTitle.text = "Your Products"
-//            connectNetwork()
-            handleProductRecommend()
+//            handleProductRecommend()
+            recommend()
         }
         viewAllProductBtn.setOnClickListener {
             productTitle.text = "All Products"
             NetworkHelper()
-                .fetchAllProducts {
+                .lightWeightProduct {
                     list.clear()
                     list.addAll(it)
+                }
+            NetworkHelper()
+                .heavyWeightProduct {
+                    list.addAll(it)
+                }
+            NetworkHelper()
+                .normalProduct {
+                    list.addAll(it)
+                }
+            NetworkHelper()
+                .volume {
+                    list.addAll(it)
                     recyclerView.adapter?.notifyDataSetChanged()
+                    productCount.text = list.size.toString() + " items"
                 }
             recyclerView.adapter = ProductAdapter(this)
             recyclerView.layoutManager = LinearLayoutManager(this)
         }
+
     }
 
     fun connectNetwork(){
@@ -77,6 +97,14 @@ class recyclerActivity : AppCompatActivity(), IController {
                         list.addAll(it)
                         recyclerView.adapter?.notifyDataSetChanged()
                     }
+                NetworkHelper()
+                    .fetchCombo2 {
+//                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
             } else if (hairtType == "Wavy-Curly" && hairtTexture == "Somewhat-Wavy" && hairtAbs == "Normal" && hairtFull == "Normal") {
                 NetworkHelper()
                     .fetchCombo2 {
@@ -151,6 +179,146 @@ class recyclerActivity : AppCompatActivity(), IController {
         }
         recyclerView.adapter = ProductAdapter(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
+    }
+
+    fun recommend(){
+        val res = dbHelper.allData
+
+
+        while (res.moveToNext()) {
+            hT = res.getString(1)
+//            hairtTexture = res.getString(3)
+            hA = res.getString(4)
+            hF = res.getString(6)
+            var s= "Straight"
+            var wC= "Wavy-Curly"
+            var cK= "Curly-Kinky"
+            var kC= "Kinky-Coily"
+
+            var l= "Low"
+            var n= "Normal"
+            var h= "High"
+
+            var t= "Thin"
+            var f= "Full"
+
+
+
+            if (hT == "Straight" || hT == wC && hA == "Low" || hA == n && hF == "Thin" || hF == n){
+                // l-w and v
+                NetworkHelper()
+                    .lightWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                    }
+                NetworkHelper()
+                    .volume {
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == s || hT == wC && hA == l || hA == n && hF == f ){
+                // l-w
+                NetworkHelper()
+                    .lightWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == s || hT == wC && hA == h && hF == t || hF == n){
+                //h-w and v
+                NetworkHelper()
+                    . heavyWeightProduct{
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+                NetworkHelper()
+                    . volume{
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+
+            }else if(hT == s || hT == wC && hA == h && hF == f){
+                //h-w
+                NetworkHelper()
+                    .heavyWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == cK || hT == kC && hA == l || hA == n && hF == t || hF == n){
+                //l-w and v
+                NetworkHelper()
+                    .lightWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+                NetworkHelper()
+                    .volume {
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == cK || hT == kC && hA == l || hA == n && hF == f){
+                //l-w
+                NetworkHelper()
+                    .lightWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == cK || hT == kC && hA == h && hF == t || hF == n){
+                // h-w and v
+                NetworkHelper()
+                    .heavyWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+                NetworkHelper()
+                    .volume {
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else if(hT == cK || hT == kC && hA == h && hF == f){
+                //h-w
+                NetworkHelper()
+                    .heavyWeightProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }else{
+                NetworkHelper()
+                    .normalProduct {
+                        list.clear()
+                        list.addAll(it)
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        productCount.text = list.size.toString() + " items"
+                    }
+
+            }
+        }
+
     }
     fun handleReset(){
         resetBtn.setOnClickListener{

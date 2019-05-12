@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.manechoiceapp.interfaces.IController
+import kotlinx.android.synthetic.main.activity_recycler.view.*
 import kotlinx.android.synthetic.main.productview_item.view.*
 
 class ProductAdapter(val controller: IController): RecyclerView.Adapter<ProductViewHolder>() {
@@ -18,6 +19,7 @@ class ProductAdapter(val controller: IController): RecyclerView.Adapter<ProductV
         holder.itemView.productNameTv.text = product.productName
         holder.itemView.productBrandTv.text = product.brand
         holder.itemView.productPriceTv.text = product.price
+//        holder.itemView.productCount.text =
 
 
 

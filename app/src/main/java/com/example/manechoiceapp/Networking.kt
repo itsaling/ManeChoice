@@ -37,7 +37,7 @@ class NetworkHelper{
             })
     }
     fun fetchCombo1(callback: (List<products>) -> Unit){
-        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/viewall?id=2&&id=9&&id=19&&id=24")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/conditioner")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()
@@ -52,7 +52,7 @@ class NetworkHelper{
             })
     }
     fun fetchCombo2(callback: (List<products>) -> Unit){
-        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/viewall?id=3&&id=8&&id=16&&id=29")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/shampoo")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()
@@ -173,6 +173,67 @@ class NetworkHelper{
     }
     fun fetchCombo10(callback: (List<products>) -> Unit){
         AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/testrepod/viewall?id=3&&id=8&&id=18&&id=28")
+            .setTag(this)
+            .setPriority(Priority.LOW)
+            .build()
+            .getAsObjectList(products::class.java, object : ParsedRequestListener<List<products>> {
+                override fun onResponse(product: List<products>) {
+                    callback(product)
+                }
+
+                override fun onError(anError: ANError?) {
+                    //handle error
+                }
+            })
+    }
+
+    fun lightWeightProduct(callback: (List<products>) -> Unit){
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/light-weight")
+            .setTag(this)
+            .setPriority(Priority.LOW)
+            .build()
+            .getAsObjectList(products::class.java, object : ParsedRequestListener<List<products>> {
+                override fun onResponse(product: List<products>) {
+                    callback(product)
+                }
+
+                override fun onError(anError: ANError?) {
+                    //handle error
+                }
+            })
+    }
+    fun volume(callback: (List<products>) -> Unit) {
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/volume")
+            .setTag(this)
+            .setPriority(Priority.LOW)
+            .build()
+            .getAsObjectList(products::class.java, object : ParsedRequestListener<List<products>> {
+                override fun onResponse(product: List<products>) {
+                    callback(product)
+                }
+
+                override fun onError(anError: ANError?) {
+                    //handle error
+                }
+            })
+    }
+    fun heavyWeightProduct(callback: (List<products>) -> Unit){
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/heavy-weight")
+            .setTag(this)
+            .setPriority(Priority.LOW)
+            .build()
+            .getAsObjectList(products::class.java, object : ParsedRequestListener<List<products>> {
+                override fun onResponse(product: List<products>) {
+                    callback(product)
+                }
+
+                override fun onError(anError: ANError?) {
+                    //handle error
+                }
+            })
+    }
+    fun normalProduct(callback: (List<products>) -> Unit){
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/normal")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()
