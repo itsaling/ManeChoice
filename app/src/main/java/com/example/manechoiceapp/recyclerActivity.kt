@@ -36,6 +36,7 @@ class recyclerActivity : AppCompatActivity(), IController {
             productTitle.text = "All Products"
             list.clear()
             handleViewAll()
+
         }
 
     }
@@ -58,33 +59,28 @@ class recyclerActivity : AppCompatActivity(), IController {
     fun handleViewAll(){
         NetworkHelper()
             .lightWeightProduct {
-                list.clear()
+//                list.clear()
                 list.addAll(it)
-                recyclerView.adapter?.notifyDataSetChanged()
-
             }
         NetworkHelper()
             .heavyWeightProduct {
                 list.addAll(it)
-                recyclerView.adapter?.notifyDataSetChanged()
-
             }
         NetworkHelper()
             .normalProduct {
                 list.addAll(it)
-                recyclerView.adapter?.notifyDataSetChanged()
-
             }
         NetworkHelper()
             .volume {
                 list.addAll(it)
                 recyclerView.adapter?.notifyDataSetChanged()
-            }
-        productCount.text = "46 items"
+                productCount.text =  list.size.toString()+  " items"
 
+            }
 
         recyclerView.adapter = ProductAdapter(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
     }
 
     fun handleProductRecommend(){
@@ -118,7 +114,7 @@ class recyclerActivity : AppCompatActivity(), IController {
                     .volume {
                         list.addAll(it)
                         recyclerView.adapter?.notifyDataSetChanged()
-                        productCount.text = list.size.toString() + " items"
+                        productCount.text = list.size.toString() +  " items"
                     }
 
             }else if((hT == s || hT == wC) && (hA == l) && hF == f ){

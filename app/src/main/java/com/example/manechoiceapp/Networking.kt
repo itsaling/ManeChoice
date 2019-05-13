@@ -38,7 +38,7 @@ class NetworkHelper{
             })
     }
     fun volume(callback: (List<products>) -> Unit) {
-        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/volume")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products2/volume")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()
@@ -68,7 +68,7 @@ class NetworkHelper{
             })
     }
     fun normalProduct(callback: (List<products>) -> Unit){
-        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products2/normal")
+        AndroidNetworking.get("https://my-json-server.typicode.com/rsamps1/products/normal")
             .setTag(this)
             .setPriority(Priority.LOW)
             .build()

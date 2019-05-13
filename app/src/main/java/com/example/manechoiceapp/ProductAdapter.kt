@@ -54,7 +54,7 @@ class ProductAdapter(val controller: IController): RecyclerView.Adapter<ProductV
         var message = ("Name: ${view.productNameTv.text.toString()} \n" +
                 "Brand: ${view.productBrandTv.text.toString()} \n" +
                 "Price: ${view.productPriceTv.text.toString()} \n" +
-                "Info: ${view.productInfoTv.text.toString()} \n"
+                "Description: ${view.productInfoTv.text.toString()} \n"
                 )
         val mintent = Intent(Intent.ACTION_SEND)
         mintent.putExtra(Intent.EXTRA_EMAIL, recipient)

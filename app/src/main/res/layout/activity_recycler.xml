@@ -26,7 +26,7 @@
                     android:padding="16dp"
                     android:id="@+id/productTitle"/>
             <TextView
-                    android:text="1"
+                    android:text="0"
                     android:layout_width="135dp"
                     android:layout_height="wrap_content" android:id="@+id/productCount" android:layout_weight="1"
                     android:textColor="#EBE3E3" android:textSize="18sp"/>
@@ -49,11 +49,6 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <Button
-                    android:text="Similar Product"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content" android:id="@+id/similarProductBtn" android:layout_weight="1"
-                    style="@style/Widget.AppCompat.Button.Colored"/>
             <Button
                     android:text="View all"
                     android:layout_width="51dp"
